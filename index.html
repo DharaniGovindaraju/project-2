@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>task 2</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<style>
+	    body{font-family: 'Roboto', sans-serif;
+		     margin-left:0;
+			 margin-right:0;}
+		.nav ul{list-style-type: none;
+		    margin:0;
+		    padding: 0 2px;
+		    position: fixed;
+		    top: 0;
+		    width:100%;
+		    overflow: hidden;
+		    background-color: #333;}
+
+			.nav ul li{float: right;
+					}
+
+			.nav ul li a{display: block;
+					 color: white;
+					 text-align: center;
+					 padding: 3px 9px;
+					 text-decoration: none;}
+			.active{width:80%;
+					font-size:10px;
+					margin:0 auto;}
+		.search {overflow: hidden;
+				 background-color: #e9e9e9;}
+			.searched{width:80%;
+					  margin:0 auto;
+					  overflow: hidden;}
+
+			.search img {float: left;
+			           overflow: hidden;
+					   display: block;
+					   color: black;
+					   padding: 14px 0;
+					   text-decoration: none;
+					   font-size: 17px;}
+			.search .search-container button {float: center;
+											  padding: 6px 10px;
+											  margin-top: 8px;
+											  margin-right: 16px;
+										      background: #ddd;
+											  font-size: 17px;
+											  overflow: hidden;
+											  border: none;}
+			.search .search-container {float: center;
+										width:50%;
+										overflow: hidden;
+										margin:0 auto;}
+		.details{margin-top:0px;
+					overflow: hidden;}
+			.det{width:80%;
+			     margin:0 auto;
+				 overflow: hidden;}
+			.details img{width: 22.9%;
+						 margin-left: 15px;
+						border: 3px solid #9c27b0;
+						float:left;
+						overflow:hidden;
+						margin-right:0px;}
+			.akshay_kumar{width:65%;
+						  float:left;
+						  overflow: hidden;
+						  background-color: #e9e9e9;}
+				.name{width:18%;
+					  margin-left:5px;
+					   padding-right:5px;
+					  float:left;
+					  height:55px;
+					  overflow:hidden;}
+				.name h3{margin-top:0;
+						 margin-bottom:0;
+						 overflow:hidden;
+						 border-right:2px solid;}
+				.name p{margin-top: 10px;
+						font-size:15px;
+						margin-bottom: 0;
+						float:left;
+						overflow:hidden;}
+				.actor{margin-top:0;
+					   margin-bottom:0;
+					   height:55px
+					   padding-left:10px;
+					   overflow:hidden;}
+				.actor h4{margin-top:0;
+					      margin-bottom:0;
+						  color:#9c27b0;
+						  overflow:hidden;}
+				.actor p{font-size:15px;
+						 float:left;
+						 overflow:hidden;
+					     margin-bottom:0;}
+				hr{border-bottom-color:#d127efd9;
+				   border-top-color:#d127efd9;}
+					.measurement{width:18%;
+								 margin-left:5px;
+								 font-size:13px;
+								 float:left;
+								 overflow:hidden;}
+					.meas{float:left;
+						  overflow:hidden;}
+					.value{float:left;
+						    margin-left:15px;
+							overflow:hidden;}
+					.type{margin-left:0;
+						  font-size:13px;
+						  float:left;
+						  overflow:hidden;}
+					.values{float:left;
+							font-size:13px;
+						    margin-left:15px;
+							overflow:hidden;
+							border-right:2px solid #d127efd9;
+							padding-right:10%;}
+					.languages{margin-left:5px;
+							   font-size:13px;
+						       float:left;
+						       overflow:hidden;}
+					.R{float:left;
+						overflow:hidden;
+						margin-left: 50px;
+						font-size: 13px;}
+					.R i{color:#0ae60a;}
+					.W{float:left;
+						overflow:hidden;
+						margin-left: 30px;
+						font-size: 13px;}
+					.W i{color:#0ae60a;}
+					.S{padding-left:30px;
+						overflow:hidden;
+						margin-left: 30px;
+						font-size: 13px;}
+					.S i{color:#0ae60a;}
+					.about_me{margin-left:5px;
+							}
+					.about_me h5{width:75px;
+								 float:left;
+								 margin-top:0;
+								 overflow:hidden;}
+					.about_me p{font-size:13px;
+							    overflow:hidden;}
+			.message{float:left;
+					 background-color: #e9e9e9;
+					 overflow:hidden;
+					 margin-left:0;
+					 width:9%;
+					 margin-bottom:2px;
+					 }
+				.mess{width:80%;
+					  overflow:hidden;
+					  margin:2px auto;}
+				.msg i{ color:#0ae60a;
+						overflow:hidden;
+						padding-left: 20%;
+						font-size: 200%;}
+				.msg p{margin-top: 0;
+					   padding-left: 13px;
+					   font-size:11px;
+					   overflow:hidden;
+						   }
+			.rating i{color:yellow;
+					 font-size: 9px;
+					 overflow:hidden;
+					  padding-left: 3px;}
+			.rating h5{font-size:8px;}
+			.rating p{font-style:bold;
+					  padding-left:23px;
+					  font-size:12px;
+					  margin-bottom: -1px;
+					  overflow:hidden;}
+		.photos{width:80%;
+				margin:0 auto;
+				overflow:hidden;}
+		.know_me{background-color: #e9e9e9;
+		         width: 23%;				 
+                float: left;
+				overflow:hidden;
+                margin-left: 14px;
+				margin-top:0;
+				margin-right:0;}
+			.exp{width:65%;
+				overflow:hidden;
+				margin:0 auto;}
+			.exp h4{padding-left: 0;
+					overflow:hidden;
+						margin-bottom: 5px;}
+			.exp select{float: center;
+							width: 95%;
+							color:white;
+							overflow:hidden;
+							height: 30px;
+							padding-left: 50px;
+							background-color: #d127efd9;}
+			.exp p{font-size:10px;
+					overflow:hidden;
+						padding-left:20px;}
+			.projects{margin-top:20px;
+				      margin-left: 5px;
+					  overflow:hidden;
+					  }
+				.projects h5{    margin-top: 0;
+							margin-bottom: 5px;
+							overflow:hidden;}
+				.pro{ margin-left: 5px;
+						overflow:hidden;
+				     background-color:white;
+					 font-size:12px;
+					 padding:2px;
+					 margin-right:5px;}
+				.pro ol{padding-left: 20px;
+						overflow:hidden;}
+				.pro i{ font-style:bold;
+						margin-left: 20%;
+						overflow:hidden;
+						font-size: 15px;}
+				.pics{background-color: #e9e9e9;
+					  margin-left:2px;
+					  width:74.7%;
+					  overflow:hidden;}
+			    .pics h4{margin-left:35%;}
+				.pics h4::first-letter{font-family: 'Tangerine', cursive;
+										color:#d127efd9;
+										font-size:50px;}
+				.pic{margin-left:33%;}
+				.pic i{font-size:250%;
+						 margin-left: 2%;
+                         padding-right: 16px;}
+				.phot{margin-left:5px;}
+				.four{overflow:hidden;
+					  width:64%;
+					  float:left;}
+				.four img{width:46%;}
+				.full img{width:33%;}
+	.gray{width:52%;
+		    padding-left: 46%;
+			padding-top: 1px;
+			font-size: 128%;
+			padding-bottom: 1px;
+		  margin:5px auto;
+		  padding-right: 4px;
+		  background-color:#9a9595;
+		  color:white;
+		  overflow:hidden;}
+		 
+	.similar h5{margin-top:0;
+				 margin-bottom: 0;
+				margin-left:7px;}
+	.similar h5::first-letter{font-family:'Sacramento', cursive;
+										color:#d127efd9;
+										font-size:25px;
+										}
+	.simi_photo{ background-color:#9a9595;
+				padding-top:2%;
+				padding-left:6%;
+				margin-bottom: 10%;
+				padding-bottom:2%;}
+	.simi_photo img{padding-right:2%;}
+	.foot{background-color:#9a9595;
+			overflow:hidden;
+			margint-top:5px;}
+			.foots{width:47%;
+				   overflow:hidden;}
+			.foots ul li{float: left;
+						 overflow:hidden;
+						list-style-type:none;}
+
+			.foots ul li a{display: block;
+					 color: white;
+					 overflow:hidden;
+					 text-align: center;
+					 padding: 3px 9px;
+					 text-decoration: none;}
+			.act{width:80%;
+				overflow:hidden;
+				font-size:10px;
+				}
+			.hr1{overflow:hidden;
+				 width:40%;
+				 float:left;}
+			.hr2{overflow:hidden;
+				 width:40%;
+				 float:left;}
+			.logo{float:left;
+				  width:20%;
+				  overflow:hidden;}
+			.social{overflow:hidden;
+					padding-left:41%;
+					}
+			.social i{font-size:230%;
+						padding-right:3%;}
+			.copy p{color: white;
+				  font-size: 10px;
+				  padding-left: 42%;}
+			.copys p{color:white;
+					 font-size:10px;
+					width: 80%;
+					margin-bottom:0;
+					margin-left: 12%;}
+			.copp p{color:white;
+					margin-top:0;
+					 font-size:10px;
+					width: 80%;
+					    padding-left: 21%;
+					margin-left: 12%;}
+	</style>
+  </head>
+  <body>
+	<div class="nav">
+		<ul>
+		    <div class="active">
+				<li><a href="#sign in">Sign in</a></li>
+				<li><a href="#about us">About us</a></li>
+				<li><a href="#login">login</a></li>
+				<li style="float:left"><a href="#Home"><i class="fa fa-home"></i></a></li>
+				<li style="float:left"><a href="#talent book">Talent books</a></li>
+				<li style="float:left"><a href="#Additional book">Additional books</a></li>
+			</div>
+		</ul>
+	</div>
+	<div class="search">
+	  <div class="searched">
+	    <img src="castle.png" alt="castle" style="width:15%;padding-left:15px;height:25px;">
+		<a style="float:right" href="#Home"><i class="fa fa-eye" style="font-size: 138%;color: black;padding-top: 21px;"></i></a>
+			<div class="search-container">
+				<form action="/action_page.php">
+					<input type="text" placeholder=" " name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+	  </div>
+	</div>
+	<div class="details">
+	  <div class="det">
+		<div class="akshay">
+			<img src="akshay.jpg" alt="akshay">
+		</div>
+		<div class="akshay_kumar">
+			<div class="name">
+				<h3>Akshay Kumar</h3>
+				<p><b>Age</b> 49 Male</p>
+			</div>
+			<div class="actor">
+				<h4>Actor,model</h4>
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i> Mumbai,Maharashtra</p>				
+			</div>
+			<hr>
+			<div class="extra-details">
+				<div class="measurement">
+					<div class="meas">
+						<p><b>Height</b></p>
+						<p><b>Weight</b></p>  
+						<p><b>Chest</b></p>  
+						<p><b>Wrist</b></p>  
+					</div>
+					<div class="value">
+						<p>5.11 Feet</p>
+						<p>80 Kg</p>
+						<p>44 Inch</p>
+						<p>34 Inch</p>
+					</div>
+				</div>
+				<div class="type">
+					<p><b>Skin type</b></p> 
+					<p><b>Hair color</b></p>
+					<p><b>Hair length</b></p>
+					<p><b>Hair type</b></p>
+					<p><b>Eye color</b></p>
+				</div>
+				<div class="values">
+						<p>Fair</p>
+						<p>Black</p>
+						<p>Small</p>
+						<p>Straight</p>
+						<p>Dark brown</p>
+				</div>
+				<div class="languages">
+					<p><b>Language</b></p> 
+					<p>English</p>
+					<p>Hindi</p>
+					<p>Punjabi</p>
+					<p>Tamil</p>
+				</div>
+				<div class="R">
+					<p><b>R</b></p>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-times" aria-hidden="true" style="color:red"></i>
+				</div>
+				<div class="W">
+					<p><b>W</b></p>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-times" aria-hidden="true" style="color:red"></i>
+				</div>
+				<div class="S">
+					<p><b>S</b></p>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+					<i class="fa fa-check" aria-hidden="true"></i><br><br>
+				</div>
+				<div class="about_me">
+					<h5>About me :</h5>
+					<p>Akshay Kumar (born Rajiv Hari Om Bhatia; 9 September 1967), is an Indian-born Canadian actor, producer, martial artist, stuntman and television personality. In a career spanning more than twenty five years, Kumar has appeared in over a hundred Hindi films and has won several awards including the National Film Award for Best Actor for his performance in Rustom and two Filmfare Awards.
+					</p>
+				</div>
+				<br>
+			</div>
+		</div>
+				<div class="message">
+		  <div class="mess">
+		    <div class="msg">
+				<i class="fa fa-whatsapp" aria-hidden="true"></i>
+				<p>Verified</p>
+				<i class="fa fa-envelope" aria-hidden="true" style="color:black"></i>
+				<p style="border-bottom:2px solid #d127efd9;padding-bottom:10px;padding-left: 8px;">New verified</p>			
+			</div>
+			<div class="rating">
+				<p>Rating</p>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<h5>Projects Applied</h5>
+				<p><b>100</b></p>
+				<h5>Projects Completed</h5>
+				<p><b>70</b></p>
+				<h5>Ongoing Projects</h5>
+				<p><b>05</b></p>
+				<br>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</div>
+	<div class="photos">
+		<div class="know_me">
+			<div class="exp">
+				<h4>Know More About Me</h4>
+				<select name="Actor">
+					<option value="volvo">Actor</option>
+					<option value="saab">Social</option>
+				</select>
+				<p>19-15 years of experiance</p>
+				<p>Willing to travel<b style="color:#0ae60a"> Yes</style></b></p>
+			</div>
+			<div class="projects">
+				<h5>Past Projects I Have Done</h5>
+				<div class="pro">
+					<ol type="1">
+						<li>Saugandh - 1991 Role Shiva <i class="fa fa-angle-double-up"></i></li>
+						<li>Dancer - 1991 Role Raju</li>
+						<li>Khiladi - 1992 Role Raj Mahondara</li>
+						<li>Mr.Bond - 1992 Role Mr.Bond</li>
+						<li>Deedar - 1992 Role Anand Mahotra</li>
+						<li>Ashanthi - 1993 Role vijay</li>
+						<li>Oli Ki Bazil - 1993 Role vijay <i class="fa fa-angle-double-down"></i></li>
+					</ol>
+				</div>
+			</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div class="pics">
+			<div class="profile">
+				<h4>My Portfolio</h4>
+				<div class="pic">
+					<i class="fa fa-camera"></i>
+					<i class="fa fa-play-circle" aria-hidden="true"></i> <i class="fa fa-music" aria-hidden="true"></i>
+				</div>
+			</div>
+		<div class="phot">
+			<div class="four">
+				<img src="ak.jpg" alt="ak">
+				<img src="aks.jpg" alt="ak">
+				<img src="aksh.jpg" alt="ak">
+				<img src="aksha.jpg" alt="ak">
+			</div>
+			<div class="full">
+				<img src="akshayy.jpg" alt="ak">
+			</div>
+			<br><br>
+		</div>
+		</div>
+	<div class="gray">
+		<h4>Ads Space</h4>
+	</div>
+	<div class="similar">
+		<h5>Similar Profiles</h5> 
+	</div>
+	<div class="simi_photo">
+		<div class="pic1">
+			<img src="white.jpg" alt="white">
+			<img src="white.jpg" alt="white">
+			<img src="white.jpg" alt="white">
+			<img src="white.jpg" alt="white">
+			<img src="white.jpg" alt="white">
+			<img src="white.jpg" alt="white">
+			<img src="white.jpg" alt="white">
+		</div>
+	
+	</div>
+	<div class="foot">
+		<div class="foots">
+		<ul>
+		    <div class="act">
+				<li><a href="#sign in">How It Works</a></li>
+				<li><a href="#about us">Block</a></li>
+				<li><a href="#login">Privacy Policy</a></li>
+				<li><a href="#Home">Blog</a></li>
+				<li><a href="#talent book">Terms Of Use</a></li>
+				<li><a href="#Additional book">Contact</a></li>
+			</div>
+		</ul>
+		</div>
+		<div class="hr1">
+			<hr>
+		</div>
+		<div class="logo">
+			<img src="castle.png" alt="castle" style="width:88%;padding-left:15px;height:25px;">
+		</div>
+		<div class="hr2">
+			<hr>
+		</div><br><br>
+		<div class="social">
+			<i class="fa fa-facebook-official" aria-hidden="true" style="color:blue"></i>
+			<i class="fa fa-youtube" aria-hidden="true" style="color:red"></i>
+			<i class="fa fa-twitter" aria-hidden="true"style="color:skyblue"></i>
+			<i class="fa fa-google" aria-hidden="true"style="color:red"></i>
+		</div>
+		<div class="copy">
+			<p> &copyCopyright 1999-2017 by Refsnes Data.</p>
+		</div>
+		<div class="copys">
+			<p>W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding. Tutorials, references, and examples are constantly reviewed</p>
+		</div>
+		<div class="copp">
+			<p>to avoid errors, but we cannot warrant full correctness of all content.</p>
+		</div>
+	</div>
+	</div>
+  </body>
+</html>
